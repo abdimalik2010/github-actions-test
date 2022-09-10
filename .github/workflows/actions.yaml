@@ -13,12 +13,12 @@ jobs:
         # Clone the repot in the node/virtual maskin by checkout the repo
       - name: Checkout 
         # Uses a public action checkout for checking out https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
 
       - name: List files after Checkout
         run: |
           pwd
-          ls 
+          ls -a
 
       - name: Simple js Action
         # Add id to be able to referens it later. addinf ID is optional
