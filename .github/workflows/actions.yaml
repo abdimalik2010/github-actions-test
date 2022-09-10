@@ -1,0 +1,20 @@
+name: Actions Workflow
+
+on: [push]
+
+jobs:
+   run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple js Action
+        # Add id to be able to referens it later. addinf ID is optional
+        id: greet
+        # Actions can referred from local directories or a public repo
+        uses: actions/hello-world-javascript-action@v1
+        # add an input
+        with:
+            who-to-greet: Malik
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
+        
+
