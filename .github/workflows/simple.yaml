@@ -17,3 +17,12 @@ jobs:
         run: |
           print("Hello python")
         shell: python
+
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory powershell
+        run: Get-Location
+      - name: Bash
+        run: pwd
+        shell: bash
