@@ -9,8 +9,8 @@ jobs:
       - name: List files
         run: |
           pwd
-          Ls 
-          
+          ls 
+
       - name: Simple js Action
         # Add id to be able to referens it later. addinf ID is optional
         id: greet
